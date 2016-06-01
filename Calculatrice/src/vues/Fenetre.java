@@ -7,57 +7,34 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 
 /**
- * 	A COMPLETER ((avec description de la classe) Pour générer les commentaire comme ça tape "/**" puis entrée.
+ * 	creation de la fenetre Calculatrice
  * 
  * @author Camille Samain
  *
  */
 
 public class Fenetre {
-	private JPanel pan = new JPanel ();
-	
-	/**
-	 * A COMPLETER (avec description de la méthode)
-	 */
-	
-	public Fenetre(){			
+	private JPanel panf = new JPanel ();
 		
-												//initialisation de la fenetre
+	public Fenetre(){	
+		/**
+		 *initialisation fenetre
+		 */
+		panf.setBackground(Color.LIGHT_GRAY);
 		JFrame fenetre = new JFrame();			//creation fenetre
-		pan.setBackground(Color.LIGHT_GRAY);	//couleur fond panel
 		fenetre.setTitle("Caclculatrice");		//ajout d'un titre
 		fenetre.setSize(500, 700);				//taille large haut
 		fenetre.setLocationRelativeTo(null);	//place la fenetre au milieu
 		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		//ferme fenetre avec croix rouge
 		
-		//GridLayout gl = new GridLayout(5,4);
-		//gl.setHgap(5);
-		//gl.setVgap(5);
-		//fenetre.setLayout(gl);			//def layout a utiliser sur content pane 5L*4C
-		
-		/*fenetre.getContentPane().add(new JButton ("C"));
-		fenetre.getContentPane().add(new JButton ("/"));
-		fenetre.getContentPane().add(new JButton ("*"));
-		fenetre.getContentPane().add(new JButton ("Del"));
-		fenetre.getContentPane().add(new JButton ("7"));
-		fenetre.getContentPane().add(new JButton ("8"));
-		fenetre.getContentPane().add(new JButton ("9"));
-		fenetre.getContentPane().add(new JButton ("-"));
-		fenetre.getContentPane().add(new JButton ("4"));
-		fenetre.getContentPane().add(new JButton ("5"));
-		fenetre.getContentPane().add(new JButton ("6"));
-		fenetre.getContentPane().add(new JButton ("+"));
-		fenetre.getContentPane().add(new JButton ("1"));
-		fenetre.getContentPane().add(new JButton ("2"));
-		fenetre.getContentPane().add(new JButton ("3"));
-		fenetre.getContentPane().add(new JButton ("()"));
-		fenetre.getContentPane().add(new JButton ("0"));
-		fenetre.getContentPane().add(new JButton ("."));
-		fenetre.getContentPane().add(new JButton ("+/-"));
-		fenetre.getContentPane().add(new JButton ("="));*/
+		Bouton.Bouton();						//comment recup mes boutons ?
+		panf=Bouton.getPanel();					//recuperation du panel cree dans Bouton
+		panf.setBackground(Color.ORANGE);
 		
 		fenetre.setVisible(true);				//affichage fenetre
-		fenetre.setContentPane(pan);
-		pan.setVisible(true);					//affichage panel
+		fenetre.setContentPane(panf);
+		fenetre.getContentPane().add(comp)		//comment ajouter mes boutons ??
+		
+		panf.setVisible(true);					//affichage panel
 	}
 }
