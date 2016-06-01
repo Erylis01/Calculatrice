@@ -6,10 +6,23 @@ import java.awt.GridLayout;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
+/**
+ * 	A COMPLETER ((avec description de la classe) Pour générer les commentaire comme ça tape "/**" puis entrée.
+ * 
+ * @author Camille Samain
+ *
+ */
+
 public class Fenetre {
 	private JPanel pan = new JPanel ();
 	
-	public Fenetre(){								//initialisation de la fenetre
+	/**
+	 * A COMPLETER (avec description de la méthode)
+	 */
+	
+	public Fenetre(){			
+		
+												//initialisation de la fenetre
 		JFrame fenetre = new JFrame();			//creation fenetre
 		pan.setBackground(Color.LIGHT_GRAY);	//couleur fond panel
 		fenetre.setTitle("Caclculatrice");		//ajout d'un titre
