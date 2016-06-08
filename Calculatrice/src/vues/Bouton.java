@@ -35,25 +35,13 @@ public class Bouton {
 		JButton[] tab_boutons = new JButton[tab_caract.length];		//ligne pas comprise...
 		
 		for (int i=0 ; i<tab_caract.length ; i++){
-			JButton boutoni = new JButton(tab_caract[i]);		//est ce que ca nomme bien mon bouton ?
-			tab_boutons[i]=boutoni;								//pas compris non plus
-			panb.add(boutoni);									//ajout boutons au panel
+			tab_boutons[i]=new JButton(tab_caract[i]);				//creation boutons pour chaque caractere de tab_caract
+			panb.add(tab_boutons[i]);								//ajout boutons au panel
 		}
 		panb.setVisible(true);	
 	}
 
-
-	/*
-	 * Pense que cette classe ne connait pas ton autre classe Fenetre. pk ????
-	 * 
-	 * Et tu fais une méthode pour récupérer ce panel. est-ce suffisant ?
-	 * 
-	 * Après avec cette métohde dans ta classe fenetre tu l'utilise pour
-	 * récupérer le panel que tu ajoute au panel principal de ta fenêtre.
-	 */
-;
-
-	public static JPanel getPanel() {
+	public static JPanel getPanb() {
 		return panb;
 	}
 

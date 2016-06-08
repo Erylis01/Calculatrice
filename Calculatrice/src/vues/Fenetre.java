@@ -1,13 +1,13 @@
 package vues;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridLayout;
 import javax.swing.JPanel;
-import javax.swing.JButton;
+import javax.swing.JTextField;
 
 /**
  * 	creation de la fenetre Calculatrice
@@ -18,14 +18,18 @@ import javax.swing.JButton;
 
 public class Fenetre {
 	private JPanel panf = new JPanel ();
+	Bouton bouton = new Bouton();
+	Case resultat = new Case();
 		
 	public Fenetre(){	
 		/**
 		 *initialisation fenetre
-		 */
+		 */	
 		
-		// recuperation panel bouton
-		JPanel panb=Bouton.getPanel();
+		//recuperation panel case
+		JPanel panc=Case.getPanc();
+		//recuperation panel bouton
+		JPanel panb=Bouton.getPanb();
 		
 		//parametrage initial fenetre
 		JFrame fenetre = new JFrame();			//creation fenetre
@@ -36,14 +40,15 @@ public class Fenetre {
 		
 		//parametrage panel fenetre
 		panf.setBackground(Color.GRAY);
-		panf.setPreferredSize(new Dimension(600,350));
+		panf.setPreferredSize(new Dimension(600,350));				//definition taille panel
 		fenetre.setLayout(new BorderLayout());						//ajout d'un layout sur le panel de la fenetre
 		fenetre.getContentPane().add(panb,BorderLayout.CENTER);		//ajout du panel boutons au centre du panel fenetre
-		fenetre.getContentPane().add(panf,BorderLayout.NORTH);		//ajout panel fenetre en haut
-		
-		//fenetre.setContentPane(panf);
+		fenetre.getContentPane().add(panc,BorderLayout.NORTH);		//ajout panel fenetre en haut
 			
 		fenetre.setVisible(true);				//affichage fenetre
 
 	}
+	
+
+
 }
