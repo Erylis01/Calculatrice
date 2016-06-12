@@ -12,10 +12,6 @@ public class Application {
 
 	}
 	
-	/*questions:
-	 * est interessant de bloquer agrandissement fenetre ?
-	 * que signifie static ?
-	 */
 
 }
 
