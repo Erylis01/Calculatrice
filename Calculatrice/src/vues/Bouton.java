@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 
 /**
@@ -16,6 +17,7 @@ import java.awt.GridLayout;
 public class Bouton {
 	// creation panel sur lequel on placera les boutons
 	private JPanel panb = new JPanel();
+	Font police = new Font("Arial", Font.BOLD,40);
 
 	public Bouton() {
 		/**
@@ -30,11 +32,13 @@ public class Bouton {
 		panb.setLayout(gl);
 
 		// creation boutons
-		String[] tab_caract = { "+", "-", "*", "/", "7", "8", "9", "C", "4", "5", "6", "del", "1", "2", "3", "=", "0", ".", "+/-" };
+		String[] tab_caract = { "C", "+", "-", "del", "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "%", "0", ".", "+/-" ,"="};
 		JButton[] tab_boutons = new JButton[tab_caract.length];
 
 		for (int i = 0; i < tab_caract.length; i++) {
 			tab_boutons[i] = new JButton(tab_caract[i]); // creation boutons pour chaque caractere de tab_caract
+			tab_boutons[i].setBackground(Color.PINK);	//couleur boutons
+			tab_boutons[i].setFont(police);
 			panb.add(tab_boutons[i]); // ajout boutons au panel
 		}
 		panb.setVisible(true);
