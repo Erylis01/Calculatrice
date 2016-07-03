@@ -25,16 +25,14 @@ public class Fenetre {
 	Case cases = new Case();
 	
 	
-	int heightf = 600;
-	int widthf= 400;
+	int heightf = 700;
+	int widthf= 500;
 	
 	public Fenetre(){	
 		/**
 		 *initialisation fenetre
 		 */	
-		
-		
-		
+			
 		//recuperation panel case
 		JPanel pancc=cases.getPanc();
 		//recuperation panel bouton
@@ -44,16 +42,16 @@ public class Fenetre {
 		JFrame fenetre = new JFrame();			//creation fenetre
 		fenetre.setTitle("Calculatrice");		//ajout d'un titre
 		
-		//Empecher de redimensionner la fenêtre
+		//Empecher de redimensionner la fenetre
 		fenetre.setResizable(false);
 
-		// Centrage de la fenêtre
+		//Centrage de la fenetre
 		Dimension dimension = new Dimension(Toolkit.getDefaultToolkit().getScreenSize());
 		int windowLeftPosition =  (dimension.width / 2 - widthf/ 2);
 		int windowRightPostion =  (dimension.height / 2 - heightf / 2);
 		fenetre.setLocation(windowLeftPosition, windowRightPostion);
 
-		//  Définition de la taille de la fenêtre
+		//Definition de la taille de la fenetre
 		fenetre.setPreferredSize(new Dimension(widthf,heightf));
 		
 		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		//ferme fenetre avec croix rouge
@@ -63,8 +61,7 @@ public class Fenetre {
 		panf.setBorder(BorderFactory.createMatteBorder(10, 10, 10, 10, Color.GRAY));		//bordure panf
 		fenetre.setContentPane(panf);			//panf devient le panel de la fenetre
 
-		//panf.setPreferredSize(new Dimension(300,350));				//definition taille panel
-		panf.setLayout(new BorderLayout());						//ajout d'un layout sur le panel de la fenetre
+		panf.setLayout(new BorderLayout());		//ajout d'un layout sur le panel de la fenetre
 		panf.add(panb,BorderLayout.CENTER);		//ajout du panel boutons au centre du panel fenetre
 		panf.add(pancc,BorderLayout.NORTH);		//ajout panel fenetre en haut
 
