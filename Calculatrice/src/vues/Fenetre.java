@@ -25,8 +25,8 @@ public class Fenetre {
 	Case cases = new Case();
 	
 	
-	int heightf = 600;
-	int widthf= 400;
+	int heightf = 700;
+	int widthf= 500;
 	
 	public Fenetre(){	
 		/**
@@ -47,11 +47,6 @@ public class Fenetre {
 		//Empecher de redimensionner la fenêtre
 		fenetre.setResizable(false);
 
-		// Centrage de la fenêtre
-		Dimension dimension = new Dimension(Toolkit.getDefaultToolkit().getScreenSize());
-		int windowLeftPosition =  (dimension.width / 2 - widthf/ 2);
-		int windowRightPostion =  (dimension.height / 2 - heightf / 2);
-		fenetre.setLocation(windowLeftPosition, windowRightPostion);
 
 		//  Définition de la taille de la fenêtre
 		fenetre.setPreferredSize(new Dimension(widthf,heightf));
@@ -68,8 +63,10 @@ public class Fenetre {
 		panf.add(panb,BorderLayout.CENTER);		//ajout du panel boutons au centre du panel fenetre
 		panf.add(pancc,BorderLayout.NORTH);		//ajout panel fenetre en haut
 
-		fenetre.setVisible(true);				//affichage fenetre
 		fenetre.pack();
+		fenetre.setLocationRelativeTo(null);
+		fenetre.setVisible(true);				//affichage fenetre
+		
 	}
 	
 
