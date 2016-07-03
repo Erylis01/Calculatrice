@@ -45,16 +45,11 @@ public class Fenetre {
 		//Empecher de redimensionner la fenetre
 		fenetre.setResizable(false);
 
-		//Centrage de la fenetre
-		Dimension dimension = new Dimension(Toolkit.getDefaultToolkit().getScreenSize());
-		int windowLeftPosition =  (dimension.width / 2 - widthf/ 2);
-		int windowRightPostion =  (dimension.height / 2 - heightf / 2);
-		fenetre.setLocation(windowLeftPosition, windowRightPostion);
-
 		//Definition de la taille de la fenetre
 		fenetre.setPreferredSize(new Dimension(widthf,heightf));
 		
-		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		//ferme fenetre avec croix rouge
+		//ferme fenetre avec croix rouge
+		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//parametrage panel fenetre
 		panf.setBackground(Color.PINK);
@@ -65,8 +60,10 @@ public class Fenetre {
 		panf.add(panb,BorderLayout.CENTER);		//ajout du panel boutons au centre du panel fenetre
 		panf.add(pancc,BorderLayout.NORTH);		//ajout panel fenetre en haut
 
-		fenetre.setVisible(true);				//affichage fenetre
 		fenetre.pack();
+		fenetre.setLocationRelativeTo(null);
+		fenetre.setVisible(true);				//affichage fenetre
+		
 	}
 	
 
