@@ -1,5 +1,6 @@
-package application;
+package modele;
 
+import controleur.Controleur;
 import vues.Fenetre;
 
 public class Application {
@@ -7,9 +8,9 @@ public class Application {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Fenetre fenetre = new Fenetre ();
-
-
+		Accumulateur accu = new Accumulateur();
+	    Controleur cont = new Controleur(accu);
+	
 	}
 	
 
