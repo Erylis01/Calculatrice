@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import controleur.Controleur;
+import controleur.ControleurCalc;
 
 /**
  * creation, positionnement des zones de lecture du texte sur la calculatrice - partie visuelle
@@ -23,7 +23,7 @@ public class ZonesTexte extends JPanel {
 	// creation panel sur lequel on placera les zones de texte
 	private JPanel panz = new JPanel();
 	
-	private Controleur controleur;
+	private ControleurCalc controleurc;
 	
 	private Font police = new Font("Arial", Font.BOLD,40);
 
@@ -35,52 +35,58 @@ public class ZonesTexte extends JPanel {
 	private JLabel zone5 = new JLabel();
 	private JLabel zone6 = new JLabel();
 	
-	public ZonesTexte(Controleur controleur){
-		this.controleur=controleur;
+	public ZonesTexte(ControleurCalc controleurc){
+		this.controleurc=controleurc;
 		
 		//parametrage panel panz avec ajout layout
-		panz.setBackground(Color.WHITE);
+		panz.setBackground(Color.LIGHT_GRAY);
 		GridLayout glz = new GridLayout(6,1);
 		panz.setLayout(glz);
 		
 		//parametrage de chaque zone
-		zone1.setPreferredSize(new Dimension(70, 70));
+		zone1.setOpaque(true);
+		zone1.setBackground(Color.WHITE);
 		zone1.setForeground(Color.DARK_GRAY);
 		zone1.setHorizontalAlignment(SwingConstants.TRAILING);
 		zone1.setFont(police);
 		
-		zone2.setPreferredSize(new Dimension(70, 70));
+		zone2.setOpaque(true);
+		zone2.setBackground(Color.WHITE);
 		zone2.setForeground(Color.DARK_GRAY);
 		zone2.setHorizontalAlignment(SwingConstants.TRAILING);
 		zone2.setFont(police);
 		
-		zone3.setPreferredSize(new Dimension(70, 70));
+		zone3.setOpaque(true);
+		zone3.setBackground(Color.WHITE);
 		zone3.setForeground(Color.DARK_GRAY);
 		zone3.setHorizontalAlignment(SwingConstants.TRAILING);
 		zone3.setFont(police);
 		
-		zone4.setPreferredSize(new Dimension(70, 70));
+		zone4.setOpaque(true);
+		zone4.setBackground(Color.WHITE);
 		zone4.setForeground(Color.DARK_GRAY);
 		zone4.setHorizontalAlignment(SwingConstants.TRAILING);
 		zone4.setFont(police);
 		
-		zone5.setPreferredSize(new Dimension(70, 70));
+		zone5.setOpaque(true);
+		zone5.setBackground(Color.WHITE);
 		zone5.setForeground(Color.DARK_GRAY);
 		zone5.setHorizontalAlignment(SwingConstants.TRAILING);
 		zone5.setFont(police);
 		
-		zone6.setPreferredSize(new Dimension(70, 70));
+		zone6.setOpaque(true);
+		zone6.setBackground(Color.WHITE);
 		zone6.setForeground(Color.DARK_GRAY);
 		zone6.setHorizontalAlignment(SwingConstants.TRAILING);
 		zone6.setFont(police);
 		
 		//bordure pour chaque zone
-		zone1.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.GRAY));
-		zone2.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.GRAY));
-		zone3.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.GRAY));
-		zone4.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.GRAY));
-		zone5.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.GRAY));
-		zone6.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.GRAY));
+		zone1.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.LIGHT_GRAY));
+		zone2.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.LIGHT_GRAY));
+		zone3.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.LIGHT_GRAY));
+		zone4.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.LIGHT_GRAY));
+		zone5.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.LIGHT_GRAY));
+		zone6.setBorder(BorderFactory.createMatteBorder(0, 0, 5, 0, Color.LIGHT_GRAY));
 				
 		//mise en place des zones de texte
 		panz.add(zone6);

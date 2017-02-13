@@ -12,13 +12,14 @@ import java.beans.PropertyChangeListener;
 
 public class Accumulateur {
 
-	/**
-	 * Methode constructeur
-	 */
+
 	private PropertyChangeSupport pcs = new PropertyChangeSupport(this);
 	private Pile pile;
 	private Pile pileinit;
 
+	/**
+	 * Methode constructeur
+	 */
 	public Accumulateur() {
 		this.pile = new Pile();
 		this.pileinit = this.pile; // on stocke la pile avant de la modifier
@@ -26,7 +27,7 @@ public class Accumulateur {
 
 	/**
 	 * @param nbreajouter
-	 * ajoute un element a la pile
+	 *            ajoute un element a la pile
 	 */
 	public void push(double nbreajouter) {
 		this.pile.push(nbreajouter);
@@ -76,11 +77,10 @@ public class Accumulateur {
 	 */
 	public double add() {
 		double addition;
-		if (this.pile.size()<2){
+		if (this.pile.size() < 2) {
 			System.out.println("Il n'y a pas assez d'elements : pas d'addition possible");
-			addition=Double.POSITIVE_INFINITY;
-		}
-		else{
+			addition = Double.POSITIVE_INFINITY;
+		} else {
 			double element1;
 			double element2;
 			element1 = this.pile.pop();
@@ -100,7 +100,7 @@ public class Accumulateur {
 		double soustraction;
 		if (this.pile.size() < 2) {
 			System.out.println("Il n'y a pas assez d'elements : pas de soustraction possible");
-			soustraction=Double.NEGATIVE_INFINITY;
+			soustraction = Double.NEGATIVE_INFINITY;
 		} else {
 			double element1;
 			double element2;
@@ -121,7 +121,7 @@ public class Accumulateur {
 		double multiplication;
 		if (this.pile.size() < 2) {
 			System.out.println("Il n'y a pas assez d'elements : pas de multiplication possible");
-			multiplication=Double.POSITIVE_INFINITY;
+			multiplication = Double.POSITIVE_INFINITY;
 		} else {
 			double element1;
 			double element2;
@@ -142,7 +142,7 @@ public class Accumulateur {
 		double division;
 		if (this.pile.size() < 2) {
 			System.out.println("Il n'y a pas assez d'elements : pas de division possible");
-			division=Double.POSITIVE_INFINITY;
+			division = Double.POSITIVE_INFINITY;
 		} else {
 			double element1;
 			double element2;
@@ -150,7 +150,7 @@ public class Accumulateur {
 			element2 = this.pile.pop();
 			if (element1 == 0) {
 				System.out.println("Erreur : division par 0");
-				division=Double.POSITIVE_INFINITY;
+				division = Double.POSITIVE_INFINITY;
 			} else {
 				division = element2 / element1;
 				this.pile.push(division);
@@ -168,7 +168,7 @@ public class Accumulateur {
 		double element;
 		if (this.pile.size() == 0) {
 			System.out.println("Erreur : la pile est vide");
-			element=Double.NEGATIVE_INFINITY;
+			element = Double.NEGATIVE_INFINITY;
 		} else {
 			element = this.pile.pop();
 			element = -element;
@@ -178,4 +178,6 @@ public class Accumulateur {
 		}
 		return element;
 	}
+	
+	
 }
